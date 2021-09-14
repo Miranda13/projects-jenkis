@@ -3,12 +3,14 @@ pipeline {
     tools {
         maven "maven-main-nodo"
     }
-    stage('Build') {
-        steps {
-            dir (‘maven-adderapp’) {
-              sh 'mvn -DskipTests clean package'
-            }
-        }
+    stages {
+	    stage('Build') {
+	        steps {
+	            dir (‘maven-adderapp’) {
+	              sh 'mvn -DskipTests clean package'
+	            }
+	        }
+	    }
     }
     post {
         success {
