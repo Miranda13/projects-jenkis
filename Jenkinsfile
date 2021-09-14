@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven "maven-nodo-principal"
+        maven "maven-main-nodo"
     }
     stage('Build') {
         steps {
